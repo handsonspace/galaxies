@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Galaxienkreisel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main class="page wide">
+  <div class="topbar">
+    <div class="eyebrow" data-i18n="eyebrow">Galaxienkreisel</div>
+    <div class="langs" role="group" aria-label="Sprache · Langue · Lingua · Language">
+      <button type="button" id="lang-de" data-lang="de" aria-pressed="true">DE</button>
+      <button type="button" id="lang-fr" data-lang="fr" aria-pressed="false">FR</button>
+      <button type="button" id="lang-it" data-lang="it" aria-pressed="false">IT</button>
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+
+  <header>
+    <h1 data-i18n="title">Welche Galaxie dreht sich auf deinem Kreisel?</h1>
+    <p class="intro" data-i18n="intro">Such dir deine Lieblingsgalaxie aus, klebe sie auf einen Bierdeckel und bring sie zum Drehen. Tippe unten auf deine Galaxie, um mehr über sie zu erfahren.</p>
+  </header>
+
+  <section class="scope" id="webb">
+    <div class="scope-head">
+      <h2>James Webb</h2><span class="since" data-i18n="since_webb">Gestartet 2021</span>
+      <p data-i18n="about_webb">Sieht Infrarotlicht, das für unsere Augen unsichtbar ist. So blickt es durch Staubwolken und entdeckt die ersten Galaxien des Universums.</p>
+    </div>
+    <div class="cards" data-scope="webb"></div>
+  </section>
+
+  <section class="scope" id="hubble">
+    <div class="scope-head">
+      <h2>Hubble</h2><span class="since" data-i18n="since_hubble">Gestartet 1990</span>
+      <p data-i18n="about_hubble">Kreist um die Erde und fotografiert seit über 35 Jahren Sterne, Nebel und Galaxien.</p>
+    </div>
+    <div class="cards" data-scope="hubble"></div>
+  </section>
+
+  <section class="scope" id="euclid">
+    <div class="scope-head">
+      <h2>Euclid</h2><span class="since" data-i18n="since_euclid">Gestartet 2023</span>
+      <p data-i18n="about_euclid">Ein Teleskop der ESA, das Milliarden von Galaxien kartiert, um die rätselhafte dunkle Materie und dunkle Energie zu erforschen.</p>
+    </div>
+    <div class="cards" data-scope="euclid"></div>
+  </section>
+
+  <footer>
+    <span data-i18n="credits">Bildnachweise auf jeder Galaxienseite</span>
+    <a href="https://astroedu.ch/project/galaxienkreisel/" target="_blank" rel="noopener" data-i18n="craft">Anleitung zum Basteln</a>
+  </footer>
+</main>
+
+<script src="assets/galaxies.js"></script>
+<script src="assets/i18n.js"></script>
+<script>
+var T = {
+  de: {
+    doc: "Galaxienkreisel",
+    eyebrow: "Galaxienkreisel",
+    title: "Welche Galaxie dreht sich auf deinem Kreisel?",
+    intro: "Such dir deine Lieblingsgalaxie aus, klebe sie auf einen Bierdeckel und bring sie zum Drehen. Tippe unten auf deine Galaxie, um mehr über sie zu erfahren.",
+    since_webb: "Gestartet 2021", since_hubble: "Gestartet 1990", since_euclid: "Gestartet 2023",
+    about_webb: "Sieht Infrarotlicht, das für unsere Augen unsichtbar ist. So blickt es durch Staubwolken und entdeckt die ersten Galaxien des Universums.",
+    about_hubble: "Kreist um die Erde und fotografiert seit über 35 Jahren Sterne, Nebel und Galaxien.",
+    about_euclid: "Ein Teleskop der ESA, das Milliarden von Galaxien kartiert, um die rätselhafte dunkle Materie und dunkle Energie zu erforschen.",
+    soon: "Bald hier",
+    empty: "Diese Galaxien kommen bald.",
+    credits: "Bildnachweise auf jeder Galaxienseite",
+    craft: "Anleitung zum Basteln"
+  },
+  fr: {
+    doc: "Toupies galactiques",
+    eyebrow: "Toupies galactiques",
+    title: "Quelle galaxie tourne sur ta toupie ?",
+    intro: "Choisis ta galaxie préférée, colle ton image sur un rond en carton et fais tourner ta toupie. Touche ta galaxie plus bas pour en savoir plus.",
+    since_webb: "Lancé en 2021", since_hubble: "Lancé en 1990", since_euclid: "Lancé en 2023",
+    about_webb: "Il voit la lumière infrarouge, invisible pour nos yeux. Il regarde ainsi à travers la poussière et découvre les premières galaxies de l'Univers.",
+    about_hubble: "Il tourne autour de la Terre et photographie étoiles, nébuleuses et galaxies depuis plus de 35 ans.",
+    about_euclid: "Un télescope de l'ESA qui cartographie des milliards de galaxies pour étudier la mystérieuse matière noire et l'énergie noire.",
+    soon: "Bientôt",
+    empty: "Ces galaxies arrivent bientôt.",
+    credits: "Crédits des images sur chaque page",
+    craft: "Instructions de bricolage (en allemand)"
+  },
+  it: {
+    doc: "Trottole galattiche",
+    eyebrow: "Trottole galattiche",
+    title: "Quale galassia gira sulla tua trottola?",
+    intro: "Scegli la tua galassia preferita, incollala su un sottobicchiere e falla girare. Tocca la tua galassia qui sotto per scoprire di più.",
+    since_webb: "Lanciato nel 2021", since_hubble: "Lanciato nel 1990", since_euclid: "Lanciato nel 2023",
+    about_webb: "Vede la luce infrarossa, invisibile ai nostri occhi. Così guarda attraverso la polvere e scopre le prime galassie dell'Universo.",
+    about_hubble: "Gira intorno alla Terra e fotografa stelle, nebulose e galassie da più di 35 anni.",
+    about_euclid: "Un telescopio dell'ESA che mappa miliardi di galassie per studiare la misteriosa materia oscura e l'energia oscura.",
+    soon: "In arrivo",
+    empty: "Queste galassie arriveranno presto.",
+    credits: "Crediti delle immagini su ogni pagina",
+    craft: "Istruzioni per costruirla (in tedesco)"
+  },
+  en: {
+    doc: "Galaxy Spinners",
+    eyebrow: "Galaxy spinners",
+    title: "Which galaxy is spinning on your spinner?",
+    intro: "Pick your favourite galaxy, glue it onto a cardboard coaster and make it spin. Tap your galaxy below to find out more.",
+    since_webb: "Launched 2021", since_hubble: "Launched 1990", since_euclid: "Launched 2023",
+    about_webb: "It sees infrared light, which is invisible to our eyes. That lets it look through dust and find the very first galaxies in the Universe.",
+    about_hubble: "It circles the Earth and has photographed stars, nebulae and galaxies for more than 35 years.",
+    about_euclid: "An ESA telescope mapping billions of galaxies to study mysterious dark matter and dark energy.",
+    soon: "Coming soon",
+    empty: "These galaxies are coming soon.",
+    credits: "Image credits on each galaxy page",
+    craft: "Craft instructions (in German)"
+  }
+};
+
+function esc(s) { var d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+
+function renderCards(lang) {
+  var d = T[lang];
+  document.querySelectorAll(".cards").forEach(function (box) {
+    var list = (window.GALAXIES || []).filter(function (g) { return g.telescope === box.dataset.scope; });
+    if (!list.length) { box.innerHTML = '<p class="empty">' + d.empty + '</p>'; return; }
+    box.innerHTML = list.map(function (g) {
+      var name = esc(g.name[lang] || g.name.de);
+      var disc = '<span class="disc"><img src="' + g.image + '" alt="" loading="lazy"></span>';
+      if (g.ready) {
+        return '<a class="card" href="' + g.slug + '/index.html">' + disc + '<span class="name">' + name + '</span></a>';
+      }
+      return '<div class="card soon">' + disc + '<span class="name">' + name + '</span><span class="badge">' + d.soon + '</span></div>';
+    }).join("");
+  });
+}
+
+initI18n(T, renderCards);
+</script>
+</body>
+</html>

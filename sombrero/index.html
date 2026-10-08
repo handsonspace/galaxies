@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sombrero Galaxy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<main class="page">
+  <div class="topbar">
+    <div class="eyebrow" data-i18n="eyebrow">Aufgenommen vom James Webb Weltraumteleskop</div>
+    <div class="langs" role="group" aria-label="Sprache · Langue · Lingua · Language">
+      <button type="button" id="lang-de" data-lang="de" aria-pressed="true">DE</button>
+      <button type="button" id="lang-fr" data-lang="fr" aria-pressed="false">FR</button>
+      <button type="button" id="lang-it" data-lang="it" aria-pressed="false">IT</button>
+      <button type="button" id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+
+  <header class="hero">
+    <button class="spinner" id="spinner" type="button" aria-label="Sombrero">
+      <img src="../images/sombrero.webp" alt="Die Sombrerogalaxie von der Seite" data-i18n-alt="alt">
+    </button>
+    <p class="tap" data-i18n="tap">Tippe auf das Bild, um es zu drehen.</p>
+    <div>
+      <h1 data-i18n="title">Die Sombrero&shy;galaxie</h1>
+      <p class="catalog" data-i18n="catalog">Ihr Katalogname ist <b>Messier 104</b> (M104).</p>
+    </div>
+  </header>
+
+  <div class="brim">
+    <svg viewBox="0 0 48 28" aria-hidden="true">
+      <ellipse cx="24" cy="18" rx="22" ry="6" fill="none" stroke="currentColor" stroke-width="2.5"/>
+      <path d="M14 17 C14 6, 34 6, 34 17" fill="currentColor" opacity="0.85"/>
+    </svg>
+    <p data-i18n="nick"><strong>Warum «Sombrero»?</strong>Von der Seite sieht sie aus wie ein mexikanischer Hut: in der Mitte ein runder Hügel aus Sternen, rundherum eine breite Krempe aus Staub.</p>
+  </div>
+
+  <div class="facts">
+    <div class="fact"><span class="k" data-i18n="k1">Entfernung</span><span class="v" data-i18n="v1">30 Millionen</span><span class="u" data-i18n="u1">Lichtjahre</span></div>
+    <div class="fact"><span class="k" data-i18n="k2">Sternbild</span><span class="v" data-i18n="v2">Jungfrau</span><span class="u" data-i18n="u2">lateinisch Virgo</span></div>
+    <div class="fact"><span class="k" data-i18n="k3">Masse</span><span class="v" data-i18n="v3">800 Milliarden</span><span class="u" data-i18n="u3">mal so schwer wie unsere Sonne</span></div>
+    <div class="fact"><span class="k" data-i18n="k4">Sternhaufen</span><span class="v">2000</span><span class="u" data-i18n="u4">Kugelsternhaufen kreisen um sie</span></div>
+  </div>
+
+  <p class="wow" data-i18n="wow">Das Licht in diesem Bild war <em>30 Millionen Jahre</em> unterwegs. Als es losflog, gab es noch keine Menschen auf der Erde.</p>
+
+  <section>
+    <h2 data-i18n="h_webb">Was sieht Webb?</h2>
+    <p data-i18n="p_webb">Webb sieht Infrarotlicht, das unsere Augen nicht sehen können. Der Staubring verdeckt das Licht der Sterne dahinter, und die Mitte leuchtet hell. Die vielen kleinen Pünktchen sind andere Galaxien, noch viel weiter weg.</p>
+  </section>
+
+  <section>
+    <h2 data-i18n="h_spin">Dreh deinen Kreisel!</h2>
+    <p data-i18n="p_spin">Auch echte Galaxien drehen sich, nur sehr langsam: Eine ganze Umdrehung dauert viele Millionen Jahre.</p>
+  </section>
+
+  <section>
+    <h2 data-i18n="h_sky">Am Himmel finden</h2>
+    <p data-i18n="p_sky">Im Frühling steht sie abends im Sternbild Jungfrau. Mit einem kleinen Teleskop siehst du sie als hellen, länglichen Fleck.</p>
+  </section>
+
+  <a class="discover" href="../index.html"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="discover">Entdecke weitere Galaxien</span></a>
+
+  <section>
+    <h2 data-i18n="h_more">Mehr entdecken</h2>
+    <div class="more">
+      <a href="https://esawebb.org/images/sombrerogalaxy1/" target="_blank" rel="noopener"><span data-i18n="l1">Das Originalbild bei ESA/Webb</span></a>
+      <a href="https://esawebb.org/images/sombrerogalaxy2/" target="_blank" rel="noopener"><span data-i18n="l2">Zwei Infrarotbilder von Webb im Vergleich</span></a>
+      <a href="https://astroedu.ch/project/galaxienkreisel/" target="_blank" rel="noopener"><span data-i18n="l3">Mehr Kreisel basteln: Anleitung und Vorlagen</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <span data-i18n="credit">Bild: NASA, ESA, CSA, STScI</span>
+    <a href="../index.html" data-i18n="home">Alle Galaxien</a>
+  </footer>
+</main>
+
+<script src="../assets/i18n.js"></script>
+<script>
+var T = {
+  de: {
+    doc: "Sombrerogalaxie",
+    eyebrow: "Aufgenommen vom James Webb Weltraumteleskop",
+    alt: "Die Sombrerogalaxie von der Seite: ein heller Kern mit einem schmalen Staubring",
+    tap: "Tippe auf das Bild, um es zu drehen.",
+    title: "Die Sombrero­galaxie",
+    catalog: "Ihr Katalogname ist <b>Messier 104</b> (M104).",
+    nick: "<strong>Warum «Sombrero»?</strong>Von der Seite sieht sie aus wie ein mexikanischer Hut: in der Mitte ein runder Hügel aus Sternen, rundherum eine breite Krempe aus Staub.",
+    k1: "Entfernung", v1: "30 Millionen", u1: "Lichtjahre",
+    k2: "Sternbild", v2: "Jungfrau", u2: "lateinisch Virgo",
+    k3: "Masse", v3: "800 Milliarden", u3: "mal so schwer wie unsere Sonne",
+    k4: "Sternhaufen", u4: "Kugelsternhaufen kreisen um sie",
+    wow: "Das Licht in diesem Bild war <em>30 Millionen Jahre</em> unterwegs. Als es losflog, gab es noch keine Menschen auf der Erde.",
+    h_webb: "Was sieht Webb?",
+    p_webb: "Webb sieht Infrarotlicht, das unsere Augen nicht sehen können. Der Staubring verdeckt das Licht der Sterne dahinter, und die Mitte leuchtet hell. Die vielen kleinen Pünktchen sind andere Galaxien, noch viel weiter weg.",
+    h_spin: "Dreh deinen Kreisel!",
+    p_spin: "Auch echte Galaxien drehen sich, nur sehr langsam: Eine ganze Umdrehung dauert viele Millionen Jahre.",
+    h_sky: "Am Himmel finden",
+    p_sky: "Im Frühling steht sie abends im Sternbild Jungfrau. Mit einem kleinen Teleskop siehst du sie als hellen, länglichen Fleck.",
+    discover: "Entdecke weitere Galaxien",
+    h_more: "Mehr entdecken",
+    l1: "Das Originalbild bei ESA/Webb",
+    l2: "Zwei Infrarotbilder von Webb im Vergleich",
+    l3: "Mehr Kreisel basteln: Anleitung und Vorlagen",
+    credit: "Bild: NASA, ESA, CSA, STScI",
+    home: "Alle Galaxien"
+  },
+  fr: {
+    doc: "Galaxie du Sombrero",
+    eyebrow: "Photographiée par le télescope spatial James Webb",
+    alt: "La galaxie du Sombrero vue de côté : un cœur lumineux entouré d'un fin anneau de poussière",
+    tap: "Touche l'image pour la faire tourner.",
+    title: "La galaxie du Sombrero",
+    catalog: "Son nom de catalogue est <b>Messier 104</b> (M104).",
+    nick: "<strong>Pourquoi « Sombrero » ?</strong>Vue de côté, elle ressemble à un chapeau mexicain : au centre, une bosse ronde faite d'étoiles, et tout autour un large bord de poussière.",
+    k1: "Distance", v1: "30 millions", u1: "d'années de voyage pour sa lumière",
+    k2: "Constellation", v2: "la Vierge", u2: "en latin Virgo",
+    k3: "Masse", v3: "800 milliards", u3: "de fois notre Soleil",
+    k4: "Amas d'étoiles", u4: "amas globulaires tournent autour d'elle",
+    wow: "La lumière de cette image a voyagé pendant <em>30 millions d'années</em>. Quand elle est partie, il n'y avait encore aucun humain sur la Terre.",
+    h_webb: "Que voit Webb ?",
+    p_webb: "Webb voit la lumière infrarouge, invisible pour nos yeux. L'anneau de poussière cache la lumière des étoiles derrière lui, et le centre brille très fort. Les petits points tout autour sont d'autres galaxies, encore beaucoup plus loin.",
+    h_spin: "Fais tourner ta toupie !",
+    p_spin: "Les vraies galaxies tournent aussi, mais très lentement : un tour complet dure des millions d'années.",
+    h_sky: "La trouver dans le ciel",
+    p_sky: "Au printemps, le soir, elle se trouve dans la constellation de la Vierge. Avec un petit télescope, on la voit comme une tache claire et allongée.",
+    discover: "Découvre d'autres galaxies",
+    h_more: "En savoir plus",
+    l1: "L'image originale sur ESA/Webb",
+    l2: "Deux images infrarouges de Webb côte à côte",
+    l3: "Fabrique d'autres toupies : instructions et modèles (en allemand)",
+    credit: "Image : NASA, ESA, CSA, STScI",
+    home: "Toutes les galaxies"
+  },
+  it: {
+    doc: "Galassia Sombrero",
+    eyebrow: "Fotografata dal telescopio spaziale James Webb",
+    alt: "La galassia Sombrero vista di lato: un nucleo luminoso con un sottile anello di polvere",
+    tap: "Tocca l'immagine per farla girare.",
+    title: "La galassia Sombrero",
+    catalog: "Il suo nome nel catalogo è <b>Messier 104</b> (M104).",
+    nick: "<strong>Perché «Sombrero»?</strong>Vista di lato, sembra un cappello messicano: al centro una cupola rotonda di stelle, tutto intorno una larga tesa di polvere.",
+    k1: "Distanza", v1: "30 milioni", u1: "di anni luce",
+    k2: "Costellazione", v2: "Vergine", u2: "in latino Virgo",
+    k3: "Massa", v3: "800 miliardi", u3: "di volte il nostro Sole",
+    k4: "Ammassi stellari", u4: "ammassi globulari le girano intorno",
+    wow: "La luce di questa immagine ha viaggiato per <em>30 milioni di anni</em>. Quando è partita, sulla Terra non c'erano ancora esseri umani.",
+    h_webb: "Che cosa vede Webb?",
+    p_webb: "Webb vede la luce infrarossa, invisibile ai nostri occhi. L'anello di polvere nasconde la luce delle stelle dietro di sé, mentre il centro brilla forte. I puntini tutto intorno sono altre galassie, molto più lontane.",
+    h_spin: "Fai girare la tua trottola!",
+    p_spin: "Anche le vere galassie girano, ma molto lentamente: un giro completo dura molti milioni di anni.",
+    h_sky: "Trovala nel cielo",
+    p_sky: "In primavera, la sera, si trova nella costellazione della Vergine. Con un piccolo telescopio la vedi come una macchia chiara e allungata.",
+    discover: "Scopri altre galassie",
+    h_more: "Scopri di più",
+    l1: "L'immagine originale su ESA/Webb",
+    l2: "Due immagini infrarosse di Webb a confronto",
+    l3: "Costruisci altre trottole: istruzioni e modelli (in tedesco)",
+    credit: "Immagine: NASA, ESA, CSA, STScI",
+    home: "Tutte le galassie"
+  },
+  en: {
+    doc: "Sombrero Galaxy",
+    eyebrow: "Photographed by the James Webb Space Telescope",
+    alt: "The Sombrero Galaxy seen from the side: a bright core with a thin ring of dust",
+    tap: "Tap the picture to spin it.",
+    title: "The Sombrero Galaxy",
+    catalog: "Its catalogue name is <b>Messier 104</b> (M104).",
+    nick: "<strong>Why “Sombrero”?</strong>Seen from the side, it looks like a Mexican hat: a round bump of stars in the middle, with a wide brim of dust all around.",
+    k1: "Distance", v1: "30 million", u1: "light years",
+    k2: "Constellation", v2: "Virgo", u2: "the Maiden",
+    k3: "Mass", v3: "800 billion", u3: "times the mass of our Sun",
+    k4: "Star clusters", u4: "globular clusters circle around it",
+    wow: "The light in this picture travelled for <em>30 million years</em> to reach us. When it set off, there were no humans on Earth yet.",
+    h_webb: "What does Webb see?",
+    p_webb: "Webb sees infrared light, which our eyes cannot see. The ring of dust blocks the light of the stars behind it, while the centre glows brightly. The tiny dots all around are other galaxies, much farther away.",
+    h_spin: "Spin your spinner!",
+    p_spin: "Real galaxies turn too, but very slowly: one full turn takes many millions of years.",
+    h_sky: "Find it in the sky",
+    p_sky: "On spring evenings it sits in the constellation Virgo. With a small telescope you can see it as a bright, stretched out smudge.",
+    discover: "Discover other galaxies",
+    h_more: "Discover more",
+    l1: "The original image at ESA/Webb",
+    l2: "Webb's two infrared views side by side",
+    l3: "Make more spinners: instructions and templates (in German)",
+    credit: "Image: NASA, ESA, CSA, STScI",
+    home: "All galaxies"
+  }
+};
+initI18n(T);
+initSpinner();
+</script>
+</body>
+</html>
