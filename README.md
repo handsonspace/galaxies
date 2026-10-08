@@ -22,9 +22,17 @@ Each spinner gets a sticker with a QR code that opens the page of its galaxy.
 
 ## QR codes
 
-Make each QR code from the address of the galaxy folder, for example
+Each QR code points to the address of the galaxy folder, for example
 `https://handsonspace.github.io/galaxies/sombrero/`.
 You can add `#fr`, `#it` or `#en` at the end of the address to force a language.
+
+The script `tools/make_qr.py` makes the codes for you from the list in `assets/galaxies.js`:
+
+1. Install the QR library once: `pip3 install "qrcode[pil]"`
+2. In the Terminal, go to this folder and run `python3 tools/make_qr.py`
+3. The codes appear in a new folder `qr_codes`: an SVG for print layouts and a PNG with the galaxy name.
+
+Run `python3 tools/make_qr.py sombrero` to make only the codes you name.
 
 ## Image credits
 
