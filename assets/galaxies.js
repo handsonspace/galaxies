@@ -8,7 +8,7 @@
 window.GALAXIES = [
   {
     slug: "sombrero",
-    telescope: "webb",
+    telescope: "hubble",
     image: "images/sombrero.webp",
     ready: true,
     name: {
