@@ -34,6 +34,16 @@ The script `tools/make_qr.py` makes the codes for you from the list in `assets/g
 
 Run `python3 tools/make_qr.py sombrero` to make only the codes you name.
 
+## Visit statistics
+
+Visits are counted with GoatCounter (free, no cookies): https://handsonspace.goatcounter.com
+Every page needs this line just before `</body>`, so copy it into each new galaxy page
+(it is already there if you copy the sombrero folder):
+
+```
+<script data-goatcounter="https://handsonspace.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+```
+
 ## Image credits
 
 Sombrero (Hubble): ESA/Hubble & NASA, K. Noll. Check the credit line of each image on esawebb.org, esahubble.org or the Euclid pages of ESA.
