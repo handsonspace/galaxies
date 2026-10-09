@@ -46,6 +46,16 @@
     apply(pick());
   };
 
+  // Statistics: record every page under one short address, so that
+  // "/galaxies/sombrero/index.html" and "/galaxies/sombrero/" are counted as the same page
+  // ("/galaxies/sombrero"). This must run before GoatCounter loads, which is why
+  // i18n.js is included above the GoatCounter line on every page.
+  window.goatcounter = window.goatcounter || {};
+  window.goatcounter.path = function (p) {
+    var clean = String(p).replace(/index\.html$/, "").replace(/\/+$/, "");
+    return clean || "/";
+  };
+
   // Count sticker scans separately.
   // The QR codes on the stickers open the page with "?qr" at the end of the address.
   // We remove "?qr" from the address right away (so shared links are not counted as scans)
