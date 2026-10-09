@@ -46,6 +46,31 @@
     apply(pick());
   };
 
+  // Count sticker scans separately.
+  // The QR codes on the stickers open the page with "?qr" at the end of the address.
+  // We remove "?qr" from the address right away (so shared links are not counted as scans)
+  // and send one extra "qr-scan-<galaxy>" event to GoatCounter.
+  (function countStickerScan() {
+    try {
+      var params = new URLSearchParams(location.search);
+      if (!params.has("qr")) return;
+      var parts = location.pathname.split("/").filter(Boolean);
+      var slug = parts.length ? parts[parts.length - 1] : "home";
+      if (/\.html$/.test(slug)) slug = parts.length > 1 ? parts[parts.length - 2] : "home";
+      params.delete("qr");
+      var rest = params.toString();
+      history.replaceState(null, "", location.pathname + (rest ? "?" + rest : "") + location.hash);
+      var tries = 0;
+      (function send() {
+        if (window.goatcounter && window.goatcounter.count) {
+          window.goatcounter.count({ path: "qr-scan-" + slug, title: "Sticker scan: " + slug, event: true });
+        } else if (tries++ < 40) {
+          setTimeout(send, 250);
+        }
+      })();
+    } catch (e) {}
+  })();
+
   // Tap the big galaxy picture to make it spin fast for a moment.
   window.initSpinner = function () {
     var spinner = document.getElementById("spinner");

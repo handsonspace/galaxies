@@ -57,7 +57,8 @@ def load_font(size):
 
 
 def make_codes(galaxy):
-    url = BASE_URL + galaxy["slug"] + "/"
+    # "?qr" marks visits that come from a sticker, so they are counted as scans
+    url = BASE_URL + galaxy["slug"] + "/?qr"
     label = galaxy["names"].get(LABEL_LANG) or galaxy["slug"]
 
     # H = highest error correction: still scans if the sticker gets scratched

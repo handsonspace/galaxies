@@ -22,8 +22,9 @@ Each spinner gets a sticker with a QR code that opens the page of its galaxy.
 
 ## QR codes
 
-Each QR code points to the address of the galaxy folder, for example
-`https://handsonspace.github.io/galaxies/sombrero/`.
+Each QR code points to the address of the galaxy folder with `?qr` at the end, for example
+`https://handsonspace.github.io/galaxies/sombrero/?qr`.
+The `?qr` lets the statistics count sticker scans separately (see below).
 You can add `#fr`, `#it` or `#en` at the end of the address to force a language.
 
 The script `tools/make_qr.py` makes the codes for you from the list in `assets/galaxies.js`:
@@ -43,6 +44,9 @@ Every page needs this line just before `</body>`, so copy it into each new galax
 ```
 <script data-goatcounter="https://handsonspace.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 ```
+
+Sticker scans appear in GoatCounter as separate events called `qr-scan-sombrero`, `qr-scan-whirlpool` and so on.
+Normal page visits are counted as usual, so you can compare scans with all visits.
 
 ## Image credits
 
